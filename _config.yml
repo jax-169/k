@@ -5,7 +5,7 @@ description: "123"
 url: "https://jax-169.github.io/k"  # 必须匹配仓库路径
 lang: zh-CN
 timezone: Asia/Shanghai
-avatar: /assets/img/avatar.jpeg  # 需上传图片到 /assets/img/
+avatar: /Image_1749045037439.jpg  # 需上传图片到 /assets/img/
 
 # 主题配置
 theme_mode:
@@ -14,18 +14,17 @@ theme_mode:
 
 # 社交链接
 social:
-  name: "你的名字"
-  email: "your@email.com"
+  name: "abc"
+  email: "q_398@foxmail.com"
   links:
-    github: https://github.com/你的用户名
-    twitter: https://twitter.com/账号  # 可选
-    linkedin: https://linkedin.com/in/账号 # 可选
+    github: https://github.com/jax-169
+    
 
 # Giscus 评论系统
 comments:
   provider: giscus
   giscus:
-    repo: 你的用户名/l  # 仓库名
+    repo: 你的用户名/k  # 仓库名
     category: Announcements
 
 # 插件
