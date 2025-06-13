@@ -17,17 +17,13 @@ jobs:
           ruby-version: 3.1
           bundler-cache: true
 
-      - name: Install Linux Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y zlib1g-dev
-
       - name: Build Site
         run: bundle exec jekyll build
 
+      # 关键修复点 ▼▼▼
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          destination_dir: /k  # 指定子路径
+          destination_dir: k   # 必须为相对路径，去掉开头的斜杠
