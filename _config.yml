@@ -1,9 +1,14 @@
 # 核心配置 
-name: "你的博客名称"
+name: "abc"
 url: "https://jax-169.github.io"   # 不要带/k路径
 baseurl: "/k"  # 关键配置项，必须带斜杠前缀
 lang: zh-CN
 timezone: Asia/Shanghai
+# ================
+# 头像设置 (添加下面两行)
+# ================
+avatar: /Image_1749045037439.jpg  # 注意开头斜杠
+
 
 # 主题支持
 theme: jekyll-theme-chirpy
