@@ -1,57 +1,47 @@
-######################
-# 基础设置（必须修改部分）
-######################
-
-# 博客标题和URL（示例值）
+# _config.yml
 title: "abc"
-url: "https://jax-169.github.io/k"  # 替换为您的GitHub Pages地址
+description: "abc"
+url: "https://jax-169.github.io"   # 顶级域名
+baseurl: "/k"                         # 子路径仓库改为 "/仓库名"
+lang: zh-CN
+theme: jekyll-theme-chirpy          # 关键：声明主题
 
-######################
-# 头像设置
-######################
-# → 确保头像已上传到 /assets/img/avatar.png
-avatar: /Image_1749045037439.jpg
-avatar_display: true
-avatar-radius: 50%  # 圆形头像
-avatar-size: 100px  # 头像尺寸
-
-######################
-# 联系方式设置
-######################
-# → 三种联系方式示例（按需启用）
+# ======================
+# 新增：联系方式设置
+# ======================
+# → 在博客页脚显示联系渠道
 social:
-  # 邮箱（推荐）
-  - link: "q_398@foxmail.com"
-    icon: "fas fa-envelope"
-    text: "联系邮箱"
+  # 邮箱联系方式（推荐）
+  - link: "q_398@foxmail.com"  # 替换为您的邮箱
+    icon: "fas fa-envelope"  # Font Awesome图标
+    text: "发邮件给我"     # 鼠标悬停提示文字
   
-  # GitHub（推荐）
-  - link: "https://github.com/jax-169"
+  # GitHub个人主页
+  - link: "https://github.com/jax-169"  # 替换为您的GitHub主页
     icon: "fab fa-github"
-    text: "GitHub主页"
+    text: "查看我的GitHub"
   
-  # 微信（需准备二维码图片）
+  # 社交媒体示例（二选一）
+  # Twitter示例
+ # - link: "https://twitter.com/你的Twitter用户名"  # 可选
+  #  icon: "fab fa-twitter"
+  #  text: "关注我的Twitter"
   
+  # 微博示例
+  # - link: "https://weibo.com/u/你的微博ID"  # 可选
+  #   icon: "fab fa-weibo"
+  #   text: "关注我的微博"
 
-######################
-# 评论系统配置
-######################
-# → 选择并启用其中一个评论系统
+  # 微信二维码（需上传二维码图片）
+  # - link: "/assets/img/wechat-qr.jpg"  # 替换为您的二维码路径
+  #   icon: "fab fa-weixin"
+  #   text: "添加我的微信"
 
-# 方案1：Utterances（GitHub Issues）
-comments:
-  active: utterances
-  utterances:
-    repo: your_github_username/your_repo_name  # 格式：用户名/仓库名
-    issue_term: title  # 使用文章标题作为issue标识
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# 方案2：Giscus（推荐）
-# giscus:
-#   repo: your_github_username/your_repo_name
-#   repo_id: "REPO_ID"     # 通过API获取
-#   category: "Comments"
-#   category_id: "CATEGORY_ID"
-
-# 方案3：Disqus
-# disqus:
-#   shortname: your-disqus-shortname
+# ======================
+# 更多配置参考
+# ======================
+# https://github.com/cotes2020/chirpy-starter/blob/main/_config.yml
