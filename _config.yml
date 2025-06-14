@@ -1,33 +1,16 @@
-# _config.yml
-title: "123"
-tagline: "123"
-description: "123"
-url: "https://jax-169.github.io/k"  # 必须匹配仓库路径
+# 核心配置
+name: "你的博客名称"
+url: "https://jax-169.github.io"   # 不要带/k路径
+baseurl: "/k"  # 关键配置项，必须带斜杠前缀
 lang: zh-CN
 timezone: Asia/Shanghai
-avatar: /Image_1749045037439.jpg  # 需上传图片到 /assets/img/
 
-# 主题配置
-theme_mode:
-  light: solarized  # 浅色模式样式
-  dark: dark  # 深色模式样式
+# 主题支持
+theme: jekyll-theme-chirpy
 
-# 社交链接
-social:
-  name: "abc"
-  email: "q_398@foxmail.com"
-  links:
-    github: https://github.com/jax-169
-    
+# 资源路径配置 (必须使用baseurl)
+assets:
+  image: "{{ site.baseurl }}/assets/img"
 
-# Giscus 评论系统
-comments:
-  provider: giscus
-  giscus:
-    repo: 你的用户名/k  # 仓库名
-    category: Announcements
-
-# 插件
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# 示例图片引用（在文章中这样使用）
+# ![描述]({{ site.assets.image }}/avatar.jpg)
