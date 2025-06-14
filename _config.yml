@@ -1,21 +1,57 @@
-# 核心配置 
-name: "abc"
-url: "https://jax-169.github.io"   # 不要带/k路径
-baseurl: "/k"  # 关键配置项，必须带斜杠前缀
-lang: zh-CN
-timezone: Asia/Shanghai
-# ================
-# 头像设置 (添加下面两行)
-# ================
-avatar: /Image_1749045037439.jpg  # 注意开头斜杠
+######################
+# 基础设置（必须修改部分）
+######################
 
+# 博客标题和URL（示例值）
+title: "abc"
+url: "https://jax-169.github.io"  # 替换为您的GitHub Pages地址
 
-# 主题支持
-theme: jekyll-theme-chirpy
+######################
+# 头像设置
+######################
+# → 确保头像已上传到 /assets/img/avatar.png
+avatar: /Image_1749045037439.jpg
+avatar_display: true
+avatar-radius: 50%  # 圆形头像
+avatar-size: 100px  # 头像尺寸
 
-# 资源路径配置 (必须使用baseurl)
-assets:
-  image: "{{ site.baseurl }}/assets/img"
+######################
+# 联系方式设置
+######################
+# → 三种联系方式示例（按需启用）
+social:
+  # 邮箱（推荐）
+  - link: "q_398@foxmail.com"
+    icon: "fas fa-envelope"
+    text: "联系邮箱"
+  
+  # GitHub（推荐）
+  - link: "https://github.com/jax-169"
+    icon: "fab fa-github"
+    text: "GitHub主页"
+  
+  # 微信（需准备二维码图片）
+  
 
-# 示例图片引用（在文章中这样使用）
-# ![描述]({{ site.assets.image }}/avatar.jpg)
+######################
+# 评论系统配置
+######################
+# → 选择并启用其中一个评论系统
+
+# 方案1：Utterances（GitHub Issues）
+comments:
+  active: utterances
+  utterances:
+    repo: your_github_username/your_repo_name  # 格式：用户名/仓库名
+    issue_term: title  # 使用文章标题作为issue标识
+
+# 方案2：Giscus（推荐）
+# giscus:
+#   repo: your_github_username/your_repo_name
+#   repo_id: "REPO_ID"     # 通过API获取
+#   category: "Comments"
+#   category_id: "CATEGORY_ID"
+
+# 方案3：Disqus
+# disqus:
+#   shortname: your-disqus-shortname
