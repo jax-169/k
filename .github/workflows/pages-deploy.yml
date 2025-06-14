@@ -1,29 +1,43 @@
-name: Deploy to GitHub Pages
+name: Deploy GitHub Pages site
 
 on:
   push:
-    branches: [main]
-    
+    branches: [main]  # 触发部署的分支
+
+permissions:  # 关键权限配置
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-deploy:
+  build-and-deploy:  # 与截图中的任务名称一致
     runs-on: ubuntu-latest
+    environment: 
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Ruby
+        uses: actions/checkout@v3
+      
+      # ===== 构建阶段 (根据实际项目修改) =====
+      - name: Setup Ruby   # 截图显示有Ruby环境
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: '3.1'  # 按需调整版本
           bundler-cache: true
-
-      - name: Build Site
-        run: bundle exec jekyll build
-
-      # 关键修复点 ▼▼▼
+          
+      - name: Build Site   # 截图显示构建步骤
+        run: |
+          bundle install
+          bundle exec jekyll build -d ./_site
+      
+      # ===== 部署阶段 =====
       - name: Deploy to Pages
+        id: deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          destination_dir: k   # 必须为相对路径，去掉开头的斜杠
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用自动生成的token
+          publish_dir: ./_site           # 构建输出目录
+          publish_branch: gh-pages       # 部署目标分支
+          keep_files: false              # 完全覆盖目标分支
