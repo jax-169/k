@@ -1,4 +1,4 @@
-# 核心配置
+# 核心配置 
 name: "你的博客名称"
 url: "https://jax-169.github.io"   # 不要带/k路径
 baseurl: "/k"  # 关键配置项，必须带斜杠前缀
