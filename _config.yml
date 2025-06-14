@@ -6,42 +6,8 @@ baseurl: "/k"                         # 子路径仓库改为 "/仓库名"
 lang: zh-CN
 theme: jekyll-theme-chirpy          # 关键：声明主题
 
-# ======================
-# 新增：联系方式设置
-# ======================
-# → 在博客页脚显示联系渠道
-social:
-  # 邮箱联系方式（推荐）
-  - link: "q_398@foxmail.com"  # 替换为您的邮箱
-    icon: "fas fa-envelope"  # Font Awesome图标
-    text: "发邮件给我"     # 鼠标悬停提示文字
-  
-  # GitHub个人主页
-  - link: "https://github.com/jax-169"  # 替换为您的GitHub主页
-    icon: "fab fa-github"
-    text: "查看我的GitHub"
-  
-  # 社交媒体示例（二选一）
-  # Twitter示例
- # - link: "https://twitter.com/你的Twitter用户名"  # 可选
-  #  icon: "fab fa-twitter"
-  #  text: "关注我的Twitter"
-  
-  # 微博示例
-  # - link: "https://weibo.com/u/你的微博ID"  # 可选
-  #   icon: "fab fa-weibo"
-  #   text: "关注我的微博"
-
-  # 微信二维码（需上传二维码图片）
-  # - link: "/assets/img/wechat-qr.jpg"  # 替换为您的二维码路径
-  #   icon: "fab fa-weixin"
-  #   text: "添加我的微信"
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# ======================
-# 更多配置参考
-# ======================
-# https://github.com/cotes2020/chirpy-starter/blob/main/_config.yml
+# 更多配置参考：https://github.com/cotes2020/chirpy-starter/blob/main/_config.yml
